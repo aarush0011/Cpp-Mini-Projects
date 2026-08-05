@@ -31,8 +31,12 @@ int main() {
         break;
 
         case '/':
-        result = num1/num2;
+        result = num1 / num2;
         std::cout<<"RESULT: "<<result<<'\n';
+        break;
+
+        default:
+        std::cout<<"Enter only '+' or '-' or '*' or '/'";
         break;
 
     }
