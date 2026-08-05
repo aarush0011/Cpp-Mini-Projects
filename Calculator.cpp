@@ -13,7 +13,29 @@ int main() {
 
     std::cout<<"Enter your 2nd number: ";
     std::cin >> num2;
-     
+    
+    switch(op) {
+        case '+':
+        result = num1 + num2;
+        std::cout<<"RESULT: "<<result<<'\n';
+        break;
+
+        case '-':
+        result = num1 - num2;
+        std::cout<<"RESULT: "<<result<<'\n';
+        break;
+
+        case '*':
+        result = num1 * num2;
+        std::cout<<"RESULT: "<<result<<'\n';
+        break;
+
+        case '/':
+        result = num1/num2;
+        std::cout<<"RESULT: "<<result<<'\n';
+        break;
+
+    }
 
     return 0;
 }
