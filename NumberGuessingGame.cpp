@@ -17,14 +17,13 @@ int main() {
         tries++;
 
         if(guess > num){
-            cout<<"Guess Lower\n";
+            cout<<"Too High\n";
         }
         else if(guess < num){
-            cout<<"Guess higher\n";
+            cout<<"Too Low\n";
         }
         else{
             cout<<"You guessed it!";
-            cout<<"Number of tries: "<<tries<<'\n';
         }
     }while(guess != num);
 
