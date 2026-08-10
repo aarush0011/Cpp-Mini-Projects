@@ -15,6 +15,17 @@ int main() {
         cout<<"Enter a guess between 1-100: ";
         cin>>guess;
         tries++;
+
+        if(guess > num){
+            cout<<"Guess Lower\n";
+        }
+        else if(guess < num){
+            cout<<"Guess higher\n";
+        }
+        else{
+            cout<<"You guessed it!";
+            cout<<"Number of tries: "<<tries<<'\n';
+        }
     }while(guess != num);
 
 
