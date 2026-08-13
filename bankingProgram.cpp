@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 double deposit_money() {
@@ -10,20 +11,21 @@ double withdraw_money(double balance) {
 }
 
 void show_balance(double balance) {
-    
+    cout<<"your balance: "<<"$"<< setprecision(2) << fixed <<balance<<'\n';
 }
 
 int main() {
 
-    int menu;
-    int account;
-    double balance = 0;
+    double balance = 10000;
+    int menu = 0;
 
 
-    do{
+    do{ 
         cout<<"Welcome to the VS Bank\n";
+        cout<< "---------------------------\n";
         cout<<"What do you want to do: \n";
-        cout<<"1. Deposit\n2. Withdraw\n3. Check Balance\n4.Exit";
+        cout<<"1. Deposit\n2. Withdraw\n3. Check Balance\n4.Exit\n";
+        cout<< "---------------------------\n";
         cout<<"Enter 1/2/3/4: ";
         cin >> menu;
 
@@ -47,7 +49,7 @@ int main() {
 
             default:
             cout<<"Enter only 1/2/3/4";
-        }
+        } 
     }while(menu != 4);
 
     return 0;
