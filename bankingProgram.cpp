@@ -44,9 +44,7 @@ int main() {
     double balance = 0;
     int menu = 0;
 
-
     do{ 
-        cout<<"Welcome to the VS Bank\n";
         cout<< "---------------------------\n";
         cout<<"What do you want to do: \n";
         cout<<"1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\n";
@@ -54,6 +52,9 @@ int main() {
         cout<<"Enter 1/2/3/4: ";
         cin >> menu;
 
+        // clearing input buffer
+        cin.clear();
+        fflush(stdin);
 
         switch(menu){
             case 1:
@@ -71,7 +72,7 @@ int main() {
             break;
 
             case 4:
-            cout<<"Thank you for visiting, Visit the VS Bank again";
+            cout<<"Thank you for visiting, Visit again";
             break;
 
             default:
