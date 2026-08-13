@@ -22,7 +22,7 @@ int main() {
     cout<<"Welcome to the VS Bank\n";
     cout<<"What do you want to do: \n";
     cout<<"1. Deposit\n2. Withdraw\n3. Check Balance\n4.Exit";
-    cout<<"Enter 1/2/3: ";
+    cout<<"Enter 1/2/3/4: ";
     cin >> menu;
 
 
@@ -32,7 +32,7 @@ int main() {
         break;
 
         case 2:
-        withdraw_money(balance);
+        balance -= withdraw_money(balance);
         break;
 
         case 3:
@@ -40,11 +40,11 @@ int main() {
         break;
 
         case 4:
-        cout<<"Thank you, Visit the VS Bank again";
+        cout<<"Thank you for visiting, Visit the VS Bank again";
+        break;
 
         default:
-        cout<<"Enter only 1/2/3.";
-
+        cout<<"Enter only 1/2/3/4";
     }
 
     return 0;
