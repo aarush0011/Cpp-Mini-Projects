@@ -3,7 +3,11 @@
 using namespace std;
 
 double deposit_money() {
-    return 0;
+    double amount;
+    cout<<"Enter amount to be deposited: ";
+    cin >> amount;
+
+    return amount;
 }
 
 double withdraw_money(double balance) {
@@ -11,12 +15,12 @@ double withdraw_money(double balance) {
 }
 
 void show_balance(double balance) {
-    cout<<"your balance: "<<"$"<< setprecision(2) << fixed <<balance<<'\n';
+    cout<<"Your balance: "<<"$"<< setprecision(2) << fixed <<balance<<'\n';
 }
 
 int main() {
 
-    double balance = 10000;
+    double balance = 0;
     int menu = 0;
 
 
@@ -24,7 +28,7 @@ int main() {
         cout<<"Welcome to the VS Bank\n";
         cout<< "---------------------------\n";
         cout<<"What do you want to do: \n";
-        cout<<"1. Deposit\n2. Withdraw\n3. Check Balance\n4.Exit\n";
+        cout<<"1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\n";
         cout<< "---------------------------\n";
         cout<<"Enter 1/2/3/4: ";
         cin >> menu;
@@ -33,10 +37,12 @@ int main() {
         switch(menu){
             case 1:
             balance += deposit_money();
+            show_balance(balance);
             break;
 
             case 2:
             balance -= withdraw_money(balance);
+            show_balance(balance);
             break;
 
             case 3:
