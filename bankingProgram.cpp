@@ -7,7 +7,13 @@ double deposit_money() {
     cout<<"Enter amount to be deposited: ";
     cin >> amount;
 
-    return amount;
+    if(amount > 0){
+        return amount;
+    }
+    else{
+        cout<<"Invalid amount\n";
+        return 0;
+    }
 }
 
 double withdraw_money(double balance) {
