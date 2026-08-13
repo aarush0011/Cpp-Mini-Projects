@@ -4,7 +4,7 @@ using namespace std;
 
 double deposit_money() {
     double amount;
-    cout<<"Enter amount to be deposited: ";
+    cout<<"Enter amount to be deposited: $";
     cin >> amount;
 
     if(amount > 0){
@@ -17,7 +17,17 @@ double deposit_money() {
 }
 
 double withdraw_money(double balance) {
-    return 0;
+    double amount = 0;
+    
+    cout<<"How much money do want to withdraw: $";
+    cin >> amount;
+
+    if(amount > balance){
+        cout<<"Insufficient funds\n";
+        return 0;
+    }
+
+    return amount;
 }
 
 void show_balance(double balance) {
