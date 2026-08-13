@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void deposit_money() {
+double deposit_money() {
     
 }
 
-void withdraw_money(double balance) {
+double withdraw_money(double balance) {
 
 }
 
@@ -28,7 +28,7 @@ int main() {
 
     switch(menu){
         case 1:
-        deposit_money();
+        balance += deposit_money();
         break;
 
         case 2:
