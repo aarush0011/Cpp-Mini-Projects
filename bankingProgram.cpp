@@ -18,7 +18,7 @@ double deposit_money() {
 
 double withdraw_money(double balance) {
     double amount = 0;
-    
+
     cout<<"How much money do want to withdraw: $";
     cin >> amount;
 
@@ -26,8 +26,13 @@ double withdraw_money(double balance) {
         cout<<"Insufficient funds\n";
         return 0;
     }
-
-    return amount;
+    else if(amount < 0) {
+        cout<<"Invalid amount";
+        return 0;
+    }
+    else{
+        return amount;
+    }
 }
 
 void show_balance(double balance) {
