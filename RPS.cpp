@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 char userChoice(){
@@ -15,7 +16,23 @@ char userChoice(){
 }
 
 char compChoice(){
-    return 0;
+
+    char comp;
+    srand(time(0));
+    int num = rand() % 3 + 1;
+
+    switch(num) {
+        case 1:
+        return 'r';
+
+        case 2:
+        return 'p';
+
+        case 3:
+        return 's';
+    }
+
+    return comp;
 }
 
 void showChoice(char choice){
@@ -44,6 +61,9 @@ int main() {
     player = userChoice();
     cout<<"Your choice: ";
     showChoice(player);
+
+    comp = compChoice();
+    cout<<"Computer choice: ";
 
     return 0;
 }
