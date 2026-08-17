@@ -53,34 +53,43 @@ void showChoice(char choice){
 }
 
 void chooseWinner(char player, char comp){
-    if(comp == 'r' && player == 's'){
-        cout<<"You LOSE!";
-    }
-    else if(comp == 'r' && player == 'p'){
-        cout<<"You WIN!";
-    }
-    else{
-        cout<<"Its a TIE!";
-    }
 
-    if(comp == 'p' && player == 'r'){
-        cout<<"Your LOSE!";
-    }
-    else if(comp == 'p' && player == 's'){
-        cout<<"You WIN!";
-    }
-    else{
-        cout<<"Its a TIE!";
-    }
+    switch(player){
+        case 'r':
+        if(comp == 'r'){
+            cout<<"It's a TIE!\n";
+        }
+        else if(comp == 'p'){
+            cout<<"You LOSE!\n";
+        }
+        else{
+            cout<<"Your WIN!\n";
+        }
+        break;
 
-    if(comp == 's' && player == 'p'){
-        cout<<"You LOSE!";
-    }
-    else if(comp == 's' && player == 'r'){
-        cout<<"You WIN!";
-    }
-    else{
-        cout<<"Its a TIE!";
+        case 'p':
+        if(comp == 'p'){
+            cout<<"It's a TIE!\n";
+        }
+        else if(comp == 's'){
+            cout<<"You LOSE!\n";
+        }
+        else{
+            cout<<"Your WIN!\n";
+        }
+        break;
+
+        case 's':
+        if(comp == 's'){
+            cout<<"It's a TIE!\n";
+        }
+        else if(comp == 'r'){
+            cout<<"You LOSE!\n";
+        }
+        else{
+            cout<<"Your WIN!\n";
+        }
+        break;
     }
 }
 
@@ -96,7 +105,7 @@ int main() {
     cout<<"Computer's choice: ";
     showChoice(comp);
 
-    
+    chooseWinner(player, comp);
 
     return 0;
 }
