@@ -96,16 +96,24 @@ void chooseWinner(char player, char comp){
 int main() {
 
     char player, comp;
+    char playAgain;
 
-    player = userChoice();
-    cout<<"Your choice: ";
-    showChoice(player);
+    do{
+        player = userChoice();
+        cout<<"Your choice: ";
+        showChoice(player);
 
-    comp = compChoice();
-    cout<<"Computer's choice: ";
-    showChoice(comp);
+        comp = compChoice();
+        cout<<"Computer's choice: ";
+        showChoice(comp);
 
-    chooseWinner(player, comp);
+        chooseWinner(player, comp);
+
+        cout<<"Do you want to play again? (y/n): ";
+        cin>>playAgain;
+    }while(playAgain == 'y' || playAgain == 'Y');
+
+    cout<<"Thank You for playing!\n";
 
     return 0;
 }
