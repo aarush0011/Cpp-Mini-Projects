@@ -52,7 +52,37 @@ void showChoice(char choice){
     }
 }
 
-void chooseWinner(char player, char comp){}
+void chooseWinner(char player, char comp){
+    if(comp == 'r' && player == 's'){
+        cout<<"You LOSE!";
+    }
+    else if(comp == 'r' && player == 'p'){
+        cout<<"You WIN!";
+    }
+    else{
+        cout<<"Its a TIE!";
+    }
+
+    if(comp == 'p' && player == 'r'){
+        cout<<"Your LOSE!";
+    }
+    else if(comp == 'p' && player == 's'){
+        cout<<"You WIN!";
+    }
+    else{
+        cout<<"Its a TIE!";
+    }
+
+    if(comp == 's' && player == 'p'){
+        cout<<"You LOSE!";
+    }
+    else if(comp == 's' && player == 'r'){
+        cout<<"You WIN!";
+    }
+    else{
+        cout<<"Its a TIE!";
+    }
+}
 
 int main() {
 
@@ -63,7 +93,10 @@ int main() {
     showChoice(player);
 
     comp = compChoice();
-    cout<<"Computer choice: ";
+    cout<<"Computer's choice: ";
+    showChoice(comp);
+
+    
 
     return 0;
 }
