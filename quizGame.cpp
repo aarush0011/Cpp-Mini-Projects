@@ -26,12 +26,11 @@ int main() {
         for(int j = 0; j < sizeof(options[i])/sizeof(options[i][0]); j++){
             cout<<options[i][j]<<'\n';
         }
-
         cin>>guess;
         guess = toupper(guess);
 
         if(guess == ans[i]){
-            cout<<"CORRECT!\n";
+            cout<<"CORRECT!!!\n";
             score++;
         }
         else{
@@ -39,6 +38,11 @@ int main() {
             cout<<"The correct answer is: "<<ans[i]<<'\n';
         }
     }
+    cout<<'\n';
+    cout<<"     Results     \n";
+    cout<<'\n';
+    cout<<"Correct Guesses: "<<score<<'\n';
+    cout<<"Score: "<<(score/(double)size)*100<<"%";
 
     return 0;
 }
