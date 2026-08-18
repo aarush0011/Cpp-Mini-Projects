@@ -26,6 +26,18 @@ int main() {
         for(int j = 0; j < sizeof(options[i])/sizeof(options[i][0]); j++){
             cout<<options[i][j]<<'\n';
         }
+
+        cin>>guess;
+        guess = toupper(guess);
+
+        if(guess == ans[i]){
+            cout<<"CORRECT!\n";
+            score++;
+        }
+        else{
+            cout<<"WRONG!!!";
+            cout<<"The correct answer is: "<<ans[i]<<'\n';
+        }
     }
 
     return 0;
