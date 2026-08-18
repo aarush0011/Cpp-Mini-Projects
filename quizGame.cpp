@@ -16,7 +16,7 @@ int main() {
 
     int size = sizeof(que)/sizeof(que[0]);
     char guess;
-    int score;
+    int score = 0;
 
     for(int i = 0; i < size; i++){
         cout<<'\n';
